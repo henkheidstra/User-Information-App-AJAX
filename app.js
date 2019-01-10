@@ -107,7 +107,7 @@ app.post('/results', (req, res) => {
       });
   
       if (matches === undefined || matches.length === 0) {
-        res.sendFile(__dirname + '/public/notFound.html'
+        res.sendFile(__dirname + '/public/notFound.html')
       } else {
         res.render('results', {
           users: matches

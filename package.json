@@ -1,12 +1,12 @@
 {
-  "name": "user_app-ajax",
+  "name": "user_app-ajax-ejs",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "dependencies": {
     "ejs": "^2.6.1",
-    "ejs-lint": "^0.3.0",
     "ejs-mate": "^3.0.0",
+    "ejs-lint": "^0.3.0",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
     "nodemon": "^1.18.9",
@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henkheidstra/User-Information-App.git"
+    "url": "git+https://github.com/henkheidstra/User-Information-App-AJAX.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/henkheidstra/User-Information-App/issues"
+    "url": "https://github.com/henkheidstra/User-Information-App-AJAX/issues"
   },
-  "homepage": "https://github.com/henkheidstra/User-Information-App#readme"
+  "homepage": "https://github.com/henkheidstra/User-Information-App-AJAX#readme"
 }
