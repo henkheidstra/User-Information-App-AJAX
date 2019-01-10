@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+
+<div class="row">
+    <form class="col s12" action="adduser" method="post" autocomplete="on">
+      <div class="row">
+        <div class="input-field col s6"><i class="material-icons prefix">account_circle</i>
+          <input class="validate" id="icon_prefix" type="text" name="firstName" />
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div class="input-field col s6"><i class="material-icons prefix">account_circle</i>
+          <input class="validate" id="icon_telephone" type="text" name="lastName" />
+          <label for="icon_telephone">Last Name</label>
+        </div>
+        <div class="input-field col s6"><i class="material-icons prefix">email</i>
+          <input class="validate" id="icon_telephone" type="text" name="email" />
+          <label for="icon_email">Email</label><br /><br /><br />
+          <button type="submit" onclick="#{userSuccess()}">Add User</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+<%- include('footer'); -%>
+
+<!-- script.
+function userSuccess() {
+alert("Succesfully added user")
+}; -->

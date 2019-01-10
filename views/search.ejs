@@ -1,0 +1,15 @@
+<%- include('header'); -%>
+
+    <br>
+    <br>
+    <form id="form" action="/results" method="POST">
+        <input id="searchBar" type="text" name="userName" autocomplete="off" placeholder="Fill in a first and last name"><br>
+        <input id="submitButton" type="submit" value="Search">
+    </form>
+
+    <div class="autocomplete">
+      <ul id="users">
+      </ul>
+    </div>
+
+<%- include('footer'); -%>

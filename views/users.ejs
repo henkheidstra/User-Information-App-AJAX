@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+
+<div class="userscontent"> 
+    <br>
+    <b>Here are all the users found: </b>
+    <br>
+    <br>
+    <ul>
+            <% users.forEach((user) => { %>
+                <li>
+                  <h6>
+                    Name: <b><%= `${user.firstname} ${user.lastname}` %> </b>
+                  </h6>
+                  <h6>
+                    E-mail: <%= `${user.email}` %>
+                  </h6>
+                </li>
+                <br>
+                <% }) %>
+        </ul>
+
+<%- include('footer'); -%>

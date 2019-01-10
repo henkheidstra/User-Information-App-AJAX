@@ -1,0 +1,55 @@
+
+.body {
+    text-align: center;
+}
+
+.brand-logo > img {
+    width: 40px;
+    padding-top: 12px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: white !important;
+}
+
+#nav-mobile {
+    color: black;
+}
+
+.container {
+    background-color: white;
+    color: black;
+    
+}
+
+.nav-wrapper {
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-wrapper ul li a {
+    color: rgb(206, 15, 15);
+    font-size: 20px;
+    font-family: 'Staatliches', cursive;
+}
+
+.indexcontent {
+    text-align: center;
+}
+
+.addusercontent {
+    text-align: center;
+}
+
+.searchcontent {
+    text-align: center; 
+    align-content: center;
+}
+
+.userscontent {
+    text-align: center;
+    font-size: 20px;
+}
