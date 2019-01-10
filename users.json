@@ -38,5 +38,35 @@
     "firstname": "Alexandre",
     "lastname": "Bush",
     "email": "abush@gmail.com"
+  },
+  {
+    "firstname": "Geir",
+    "lastname": "Suresh",
+    "email": "geirsuresh@gmail.com"
+  },
+  {
+    "firstname": "Heidrich",
+    "lastname": "Gerfrid",
+    "email": "heidrich@gmail.com"
+  },
+  {
+    "firstname": "Wynnstan",
+    "lastname": "Beaumont",
+    "email": "beaumont.w@gmail.com"
+  },
+  {
+    "firstname": "Hui",
+    "lastname": "Jia",
+    "email": "huijia@gmail.com"
+  },
+  {
+    "firstname": "Jin",
+    "lastname": "Heng",
+    "email": "jinjinheng@gmail.com"
+  },
+  {
+    "firstname": "Xiulan",
+    "lastname": "Chen",
+    "email": "xiu.chen@gmail.com"
   }
 ]
