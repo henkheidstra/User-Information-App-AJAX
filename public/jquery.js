@@ -1,12 +1,10 @@
 $(document).ready(() => {
-
-
   $('#searchBar').keyup(() => {
     let input = $('#searchBar').val().toLowerCase();
     setTimeout(function() {
       $.ajax({
           type: "POST",
-          url: '/search',
+          url: '/',
           data: {
             user: input
           },

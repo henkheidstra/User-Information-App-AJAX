@@ -14,15 +14,16 @@
         <div class="input-field col s6"><i class="material-icons prefix">email</i>
           <input class="validate" id="icon_telephone" type="text" name="email" />
           <label for="icon_email">Email</label><br /><br /><br />
-          <button type="submit" onclick="#{userSuccess()}">Add User</button>
+          <button type="submit" onclick="userSuccess()">Add User</button>
         </div>
       </div>
     </form>
   </div>
 
-<%- include('footer'); -%>
+  <script>
+    function userSuccess() {
+      alert("Succesfully added user");
+    }
+    </script>
 
-<!-- script.
-function userSuccess() {
-alert("Succesfully added user")
-}; -->
+<%- include('footer'); -%>

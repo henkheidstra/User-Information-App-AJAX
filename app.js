@@ -22,15 +22,14 @@ app.use(express.urlencoded({
 app.set('view engine', 'ejs');
 
 // setup path to 'views' folder
-app.set(express.static(path.join(__dirname, '/views')));
+app.use('/', express.static(__dirname + '/views'));
 
 // setup path to 'public' folder
-app.use(express.static(path.join(__dirname + '/public')));
+app.use('/public', express.static(__dirname + '/public'));
 
 // required to make css work
 app.use('/static', express.static('./static') )
 app.use(express.static('./static/css'));
-
 
 // render index page
 app.get('/', (req, res) => {
@@ -61,28 +60,6 @@ app.get('/search', (req, res) => {
     });
 })
 
-// Autocomplete
-app.post('/search', (req, res) => {
-    let input = req.body.user;
-    let match = [];
-  
-    fs.readFile('users.json', 'utf8', (err, data) => {
-      if (err) throw err;
-  
-      let userData = JSON.parse(data);
-  
-  
-      userData.forEach((user) => {
-        if ((input).length >= 2 && (user.firstname.toLowerCase()).includes(input) && (user.firstname.toLowerCase()).charAt(0) === input.charAt(0)) {
-          match.push(user)
-        } else if ((input).length >= 2 && (user.lastname.toLowerCase()).includes(input) && (user.lastname.toLowerCase()).charAt(0) === input.charAt(0)) {
-          match.push(user)
-        }
-      });
-      res.send(match);
-    })
-  });
-
 // route 3: takes in the post request from your form, then displays matching users on a new page. Users should be matched based on whether either their first or last name contains the input string.
 app.post('/results', (req, res) => {
 
@@ -107,7 +84,7 @@ app.post('/results', (req, res) => {
       });
   
       if (matches === undefined || matches.length === 0) {
-        res.sendFile(__dirname + '/public/notFound.html')
+        res.sendFile(__dirname + '/public/nothingfound.ejs')
       } else {
         res.render('results', {
           users: matches
@@ -115,6 +92,27 @@ app.post('/results', (req, res) => {
       }
     })
   });
+
+// autocomplete function ajax
+app.post('/', (req, res) => {
+  let input = req.body.user;
+  let match = [];
+
+  fs.readFile('users.json', 'utf8', (err, data) => {
+    if (err) throw err;
+
+    let userData = JSON.parse(data);
+
+    userData.forEach((user) => {
+      if ((input).length >= 1 && (user.firstname.toLowerCase()).includes(input) && (user.firstname.toLowerCase()).charAt(0) === input.charAt(0)) {
+        match.push(user)
+      } else if ((input).length >= 1 && (user.lastname.toLowerCase()).includes(input) && (user.lastname.toLowerCase()).charAt(0) === input.charAt(0)) {
+        match.push(user)
+      }
+    });
+    res.send(match);
+  })
+});
 
 // PART 2
 // route 4: renders a page with three inputs on it (first name, last name, and email) that allows you to add new users to the users.json file.
